@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="menu-layout container-fluid">
+        <div class="row menu-container">
+            <div class="menu-nav col-lg-3 col-sm-12">
+                <div class="d-flex flex-column align-items-center">
+                    <!-- Logo Section -->
+                    <div class="text-center w-100 utensil logo-menu">
+                        <i class="fa-solid fa-utensils mt-4 fa-bounce" mb-4></i>
+                    </div>
+                
+                    <!-- Navigation Section -->
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <!-- Home Item -->
+                        <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa-solid fa-house me-2 ic-bg-home"></i>
+                            <a href="index.html" class="nav-link" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home"
+                            aria-selected="false">Home</a>
+                        
+                        </div>
+                
+                        <!-- Breakfast Item -->
+                        <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa-solid fa-egg me-2 ic-bg ic-bg-breakfast"></i>
+                            <a href="" class="nav-link" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home"
+                            aria-selected="false">Breakfast</a>
+                        </div>
+                        
+                
+                        <!-- Meals Item -->
+                        <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa-solid fa-bacon me-2 ic-bg ic-bg-meals"></i>
+                            <a href="" class="nav-link" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home"
+                            aria-selected="false">Meals</a>
+                        </div>
+                
+                        <!-- Beverages Item -->
+                        <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa-solid fa-mug-hot me-2 ic-bg ic-bg-Beverages"></i>
+                            <a href="" class="nav-link" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home"
+                            aria-selected="false">Beverages</a>
+                        </div>
+                        <div class="photo-section text-center mt-4">
+                          <img src="./imgs/delivery.png" alt="Delivery" class="img-fluid photo-img">
+                          <p>Fastest Delivery.</p>
+                      </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+
+            <div class="menu-content col-lg-9 col-sm-12 my-5">
+                <div class="search-cart row">
+                    <nav class="navbar bg-body-tertiary col-9">
+                        <div class="container-fluid">
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>
+                        </div>
+                      </nav>
+                      <div class="cart col-3 bg-body-tertiary d-flex align-items-center justify-content-evenly ">
+                        <i class="fa-solid fa-cart-shopping cart-icon bg-body-tertiary position-relative" 
+                           data-bs-toggle="modal" 
+                           data-bs-target="#staticBackdrop" 
+                           onclick="viewCart(cartProducts)">
+                            <span id="cartNo" class="position-absolute fs-6 top-50 start-100 translate-middle badge rounded-pill bg-warning">
+                          0
+                        </span>
+                        </i>
+                       
+                      </div>
+                </div>
+                <div class="items  pb-3">
+                        <div class="all-items container-fluid col-12 d-flex justify-content-evenly gap-2 flex-wrap row h-100">
+                            <div class="card p-0  col-sm-4 col-lg-2" style="width: 7rem; height: 7rem;">
+                                <div class="card-body  p-0 d-flex flex-column align-items-center justify-content-center">
+                                  <i class="fa-sharp-duotone fa-solid fa-fish" style="color: #c08216;"></i>
+                                  <div class="card-text text-white text-center mt-2">
+                                    <p>Seafood</p>
+                                  </div>
+                                </div>
+                              </div>    
+                          <div class="card p-0  col-sm-4 col-lg-2" style="width: 7rem; height: 7rem;">
+                            <div class="card-body  p-0 d-flex flex-column align-items-center justify-content-center">
+                              <i class="fa-sharp-duotone fa-solid fa-fish" style="color: #c08216;"></i>
+                              <div class="card-text text-white text-center mt-2">
+                                <p>Seafood</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-0  col-sm-4 col-lg-2" style="width: 7rem; height: 7rem;">
+                            <div class="card-body p-0 d-flex flex-column align-items-center justify-content-center">
+                              <i class="fa-solid fa-pizza-slice" style="color: #c08216;"></i>
+                              <div class="card-text text-white text-center mt-2">
+                                <p>Pizza</p> <!-- Text below the icon -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-0  col-sm-4 col-lg-2" style="width: 7rem; height: 7rem;">
+                            <div class="card-body p-0 d-flex flex-column align-items-center justify-content-center">
+                              <i class="fa-solid fa-ice-cream" style="color: #c08216;"></i>
+                              <div class="card-text text-white text-center mt-2">
+                                <p>Dessert</p> <!-- Text below the icon -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-0  col-sm-4 col-lg-2" style="width: 7rem; height: 7rem;">
+                            <div class="card-body p-0 d-flex flex-column align-items-center justify-content-center">
+                              <i class="fa-solid fa-drumstick-bite" style="color: #c08216;"></i>
+                              <div class="card-text text-white text-center mt-2">
+                                <p>
+                                <div class="card-text text-white text-center mt-2">
+                                  <p>Lunch</p> <!-- Text below the icon -->
+                                </div>
+                                </p> <!-- Text below the icon -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-0 col-sm-4 col-lg-2" style="width: 7rem; height: 7rem;">
+                            <div class="card-body p-0 d-flex flex-column align-items-center justify-content-center">
+                              <i class="fa-solid fa-burger" style="color: #c08216;"></i>
+                              <div class="card-text text-white text-center mt-2 d-flex flex-column align-items-center">
+                                <p>Burger and Fast Food</p> <!-- Text below the icon -->
+                              </div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      
+                </div>
+                <div class="food col-lg-10 col-sm-9 row  d-flex justify-content-center align-items-center m-auto pt-3" id="mealElement">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

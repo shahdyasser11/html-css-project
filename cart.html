@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cart-style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="container-fluid bg-secondary">
+    <nav class="navbar navbar-expand-lg  ">
+      <div class="container-fluid ">
+
+        <a class="navbar-brand d-flex justify-content-center align-items-center text-light" href="#">
+          <i class="fa-solid fa-utensils fa-bounce fa-2xl "></i>
+          <h1 class="dine">DINE<span class="fs-5 fst-italic">with us</span></h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+          <ul class="navbar-nav  mb-2 mb-lg-0  ms-auto me-5">
+            <li class="nav-item ">
+              <a class="nav-link text-light " aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item active ms-lg-3">
+              <a class="nav-link text-light  " href="#">Menu</a>
+            </li>
+            <li class="nav-item active ms-lg-3">
+              <a class="nav-link  text-secondary-emphasis fw-semibold fs-5" href="#">Order</a>
+            </li>
+          </ul>
+          <form class="d-flex mb-2 mb-lg-0  ms-lg-auto me-lg-5">
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-light text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-solid fa-cart-shopping icon-link-hover"  id="cart"><span class="fs-6"> Cart </span></i >
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-cart-shopping icon-link-hover"  id="cart"><span class="fs-6">  Your Cart List  </span></i ></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span><i class="fa-regular fa-moon fa-2xl fa-flip-horizontal ms-3 pt-4 "></i></span>
+          </form>
+
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- Features Section -->
+  <div id="featuresSec" >
+
+      <p class="display-3 text-center pt-5"> Order Your Best Food anytime </p>
+      <p class=" text-center fw-bolder text-secondary">Hey,Our delicious food is waiting for you,
+        We are always near to you fresh item of food
+      </p>
+      
+      <div  class="container mx-auto " >
+        <div class=" d-lg-flex justify-content-center flex-row row  ">
+
+          <div class="col-sm-12  col-md-6 col-lg-3 pe-4 py-3">
+            <div ><image src="./imgs/1.jpg" alt="Choose Your Favorite Food" id="jpg"  class="rounded-5 w-75"></image></div>
+            <p class="align-baseline fw-medium  my-3 fs-5 text-secondary  fst-italic">Choose your Favorite Food</p>
+          </div>
+        
+          <div class="col-sm-12 col-md-6 col-lg-3 pe-4 py-3 ">
+            <div ><image src="./imgs/2.jpg" alt="Free And Fast Delivery "  id="jpg"  class="rounded-5 w-75" ></image></div>
+            <p class="align-baseline fw-medium my-3 fs-5 text-secondary fst-italic">Free And Fast Delivery</p>
+          </div>
+
+          <div class="col-sm-12  col-md-6 col-lg-3 pe-4 py-3">
+            <div><image src="./imgs/3.jpg" alt="Easy Payments Methods"  id="jpg"  class="rounded-5 w-75" ></image></div>
+            <p class="align-baseline fw-medium my-3 fs-5 text-secondary fst-italic">Easy Payments Methods</p>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-3 pe-4 py-3">
+            <div><image src="./imgs/4.jpg" alt="And Finally,Enjoy With Your Food "  id="jpg"  class="rounded-5 w-75 "></image></div>
+            <p class="align-baseline fw-medium my-3 fs-5 text-secondary fst-italic ">Enjoy With Your Food</p>
+          </div>
+
+        </div>
+      </div>
+
+      
+  </div>
+
+ <!-- orderNow section -->
+  <div id="orderSec">
+    <p   class=" container-fluid display-4 text-center shadow" ><span style="color:#ac9191 ;">Order</span> Now </p>
+
+    <div class=" d-lg-flex container-fluid" >
+    
+      <div class="  col-lg-8 col-md-12 ">
+
+        <div class="my-5 container"> 
+            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <span class="progress-bar bg-success" style="width:0" data-width="100%" id="progress"></span>
+        </div>
+      
+        <div class="my-4 p-4">
+          <form class="row g-3">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label fw-semibold">First Name</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Your first Name...."  required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault02" class="form-label fw-semibold">Last Name</label>
+              <input type="text" class="form-control" id="validationDefault02"  placeholder="Enter Your Last Name...."required>
+            </div>
+            <div class="col-md-5">
+              <label for="validationDefault04" class="form-label fw-semibold">Country</label>
+              <select class="form-select" id="validationDefault03" required>
+                <option selected disabled value="">Choose Your Country...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-9">
+              <label for="validationDefault03" class="form-label fw-semibold">Address</label>
+              <input type="text" class="form-control" id="validationDefault04"  placeholder="Enter your City... ,State... , Street... , Block Number..." required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault03" class="form-label fw-semibold">Phone Number</label>
+              <input type="number" class="form-control" id="validationDefault05"  placeholder="-----------" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault03" class="form-label fw-semibold">Another Phone Number</label>
+              <input type="number" class="form-control" id="validationDefault06" placeholder="-----------"  required>
+            </div>
+            <div class="col-md-5">
+              <label for="validationDefault03" class="form-label fw-semibold">Order Arrival Date</label>
+              <input type="date" class="form-control" id="validationDefault07"  placeholder="--/--/--" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault03" class="form-label fw-semibold">Order Arrival Time</label>
+              <input type="time" class="form-control" id="validationDefault08" placeholder="-----------"  required>
+            </div>
+            <div class="col-md-9">
+              <label for="validationDefault03" class="form-label fw-semibold">Email Address</label>
+              <input type="email" class="form-control" id="validationDefault09"  placeholder="name@example.com" required>
+            </div>
+            <div class="col-md-9">
+              <label for="validationDefault00" class="form-label fw-semibold">Order Notes</label>
+              <textarea class="form-control rounded-4 bg-transparent" id="exampleFormControlTextarea1" rows="5" placeholder="Notes about your order & delivery"></textarea>
+              </div>
+         
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label fw-semibold" for="invalidCheck2">
+                 Sure About My Details
+                </label>
+            </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-dark" type="submit">Submit </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-10 col-sm-10 pb-sm-5 pb-md-5 ms-5 pt-lg-5 ">
+        <ul class="list-group " id="roots" >
+          <li class="list-group-item border-bottom-0  fs-2  ">Your<span style="color:#ac9191;"> Order</span></li>
+          <li class="list-group-item border-0">
+            <table  class="table">
+
+              <thead>
+                <tr>
+                  <th>PRODUCT</th>
+                  <th>PRICE </th>
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr >
+                  <td  scope="row col-1" class ="d-flex justify-content-center gap-2 ">
+                    <img class="w-50" src="./imgs/6.jpeg">
+                  <div class="m-auto">
+                    <h6>Grilled Meat</h6>
+                    <button class="decrease" id="decrementBtn" >
+                     <i class="fa-solid fa-minus fa-2xs" ></i> 
+                    </button>
+                    <span class="fw-medium" id="quantity">1</span>
+                    <button class="increase mt-2 "  id="incrementBtn">
+                      <i class="fa-solid fa-plus fa-2xs"></i>
+                    </button>
+                   
+                  </div>
+                </td>
+                <td scope="col-1" class="text-danger fw-medium pt-5" ><span id="price">50</span>$</td>
+                <td >
+                  <i class="fa-solid fa-xmark"></i>
+                </td>
+                </tr>
+
+                <tr>
+                  <td  scope="row col-1" class ="d-flex justify-content-center gap-2"><img class="w-50" src="./imgs/5.jpeg">
+                  <div class="m-auto ms-1">
+                    <h6>Pizza</h6>
+                    <button class="decrease " id="decrementBtn">
+                      <i class="fa-solid fa-minus fa-2xs"></i> 
+                    </button>
+                    <span class="fw-medium" id="quantity">1</span>
+                    <button class="increase mt-2"  id="incrementBtn">
+                      <i class="fa-solid fa-plus  fa-2xs"></i>
+                    </button>
+                  </div>
+                  </td>
+                  <td scope="col-1" class="text-danger fw-medium pt-4"><span id="price">37</span>$</td>
+                  <td >
+                    <i class="fa-solid fa-xmark"></i>
+                  </td>
+                </tr>
+
+                <tr>
+                <td  scope="row col-1" class ="d-flex justify-content-center gap-2"><img class="w-50" src="./imgs/7.jpeg">
+                <div class="m-auto pe-3">
+                  <h6>PanCakes</h6>
+                  <button class="decrease" id="decrementBtn">
+                    <i class="fa-solid fa-minus fa-2xs"></i> 
+                  </button>
+                  <span class="fw-medium" id="quantity">1</span>
+                  <button class="increase mt-2"  id="incrementBtn">
+                    <i class="fa-solid fa-plus  fa-2xs"></i>
+                  </button>
+                </div>
+                </td>
+                <td scope="col-1" class="text-danger fw-medium pt-5"><span id="price">28</span>$</td>
+                <td >
+                  <i class="fa-solid fa-xmark"></i>
+                </td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <th>Order Total</th>
+                  <th ><span id="total">115</span>$</th>
+                </tr>
+              </tfoot>
+
+            </table>
+          </li>
+          <li class="list-group-item border-bottom-0 fs-2 fst-italic" style="color:#977c7c;">Payment</li>
+           <li class="list-group-item">
+              <button class="form-control" >
+                <i class="fa-solid fa-credit-card"></i>
+                   <span>Credit Card</span>
+              </button>
+              <button class="form-control my-3" >
+                <i class="fa-brands fa-paypal"></i>
+                <span>paypal</span>
+              </button>
+              <div class="col-12">
+                <button class="btn btn-dark pay my-3" type="submit"style="background-color:#977c7c;" >Pay<span id="payAmount">115</span>$</button>
+              </div>
+           </li>
+        </ul>
+      </div>
+   </div>
+  </div>
+
+ <!-- Contact Section  -->
+  <div class="contactSec d-lg-flex justify-content-center align-items-center">
+    <div class=" row col-sm-12 m-sm-auto col-md-8 col-lg-6  pe-1">
+      <h4 class="display-4 fw-medium text-center py-4 " style="color:#664e4e;"> Contact Us</h4>
+      <h2  style="color:#664e4e;">Let us help!</h2>
+      <p >If you're unsure about what type of food will eat favourite for you, <br>just tell us a little more about your needs. We will get back to you as soon as possible <br>with the answers you need!</p>
+
+      <h2 style="color:#664e4e;" class="dine">DINE<span class="fs-5 fst-italic text-dark">with us</span> Returant Address </h2>
+      <p><i class="fa-solid fa-location-dot"></i> El-Mosheeer Street,Sedi Gaber,Alex <br/><i class="fa-solid fa-phone"></i> Phone: 123456789 <br/><i class="fa-solid fa-envelope"></i> Support@Returant.com </p>
+    
+
+      <h2 style="color:#664e4e;">Working Hours</h2>
+      <p  class="pt-2">8:00 AM To 11:00 PM On Weekdays <br/>11:00 AM To 1:00 AM On Weekends</p>
+
+      <h2 style="color:#664e4e;">Follow US</h2>
+      <div class="text1 py-3">
+
+        <div class="text2">
+            <div class="text3">
+                <a href="#" ><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <span>Facebook</span>
+        </div>
+
+        <div class="text2">
+            <div class="text3">
+                <a href="#" ><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <span>Youtube</span>
+        </div>
+
+        <div class="text2">
+            <div class="text3">
+                <a href="#" ><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <span>Instagram</span>
+        </div>
+
+        <div class="text2">
+            <div class="text3">
+                <a href="#" ><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <span>Whatsapp</span>
+        </div>
+
+        <div class="text2">
+            <div class="text3">
+                <a href="#" ><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <span>Twitter</span>
+        </div>
+
+        <div class="text2">
+            <div class="text3">
+                <a href="#" ><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+            <span>Location</span>
+      </div>
+    </div>
+      
+    </div>
+
+    <div  class="row col-sm-12 ps-sm-4  col-md-10 m-auto col-lg-5 me-lg-5 ">
+      <video src="./imgs/istockphoto-2148374247-640_adpp_is.mp4"  class=" mt-5  bg-dark opacity-50 rounded-5"  loop muted autoplay></video>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class=" text-center  fw-semibold py-3">
+    <h6 style="color:#f5f5f7;">DINE<span class="fst-italic">with us</span> Returant <br/>
+      <p class="my-1">
+        Copyright © 2024  DINE<span class="fst-italic">with us</span> Returant   - All Rights Reserved 
+      </p>
+    </h6>
+  </footer>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script-cart.js"></script>
+</body>
+</html>
