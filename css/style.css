@@ -53,7 +53,6 @@
     object-fit: cover;
     animation:
         rotate 15s linear infinite;
-        /* slideInFromRight 2s ease-in-out forwards; */
 }
 
 @keyframes rotate {
@@ -129,7 +128,6 @@ margin-bottom: 2rem;
 .Categ {
     color: #705C53;
     position: relative;
-    /* Required for positioning the ::after element */
     display: inline-block;
     z-index: 1;
 }
@@ -173,7 +171,7 @@ margin-bottom: 2rem;
 }
 
 .info-cont * {
-    position: relative; /* Ensure text/content stays on top */
+    position: relative; 
     z-index: 1;
 }
 
@@ -399,6 +397,12 @@ border-bottom-left-radius: 1.7rem;
 border-bottom-right-radius: 1.7rem;
 
 }
+.all-items i {
+    font-size: 3rem; 
+    color: #193658; 
+    text-shadow: 3px 2px 10px rgba(99, 83, 75, 0.5); 
+}
+
 .intro-body::before {
     content: '';
     position: absolute;
@@ -423,15 +427,49 @@ border-bottom-right-radius: 1.7rem;
 }
 
 .photo-img {
-    max-width: 100%; /* Make sure the image is responsive */
+    max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
-.photo-section p{
+.photo-section {
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(19, 19, 19, 0.1);
+    overflow: hidden;
+  }
+  
+  .photo-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/delivery.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(0.09rem); 
+    z-index: 0; 
+  }
+  
+  .photo-section p {
+    position: relative;
     font-size: 4rem;
     color: rgb(156, 186, 224);
-}
+    text-shadow: 2rem 2rem 10rem rgba(10, 10, 10, 0.936);
+    z-index: 1; 
+  }
+
+  @media (max-width: 964px) {
+    .photo-section {
+      display: none; 
+    }
+  }
 
 .addToCartBtn{
     background-color: rgb(77, 193, 10);
@@ -460,6 +498,38 @@ border-bottom-right-radius: 1.7rem;
     color: red; 
 }
 
+.wishlist-icon{
+        background-color: white;
+        color:rgb(227, 61, 15);
+        font-size: 2rem;
+    }
+
+.connection{
+        text-align: center;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+
+.checkoutBtn{
+    background-color: #63534b;
+    border-color: #63534b;
+    color: white;
+}
+.closeBtn{
+    background-color: #c72d1c;
+    border-color: #c72d1c;
+    color: white; 
+}
+
+.removeFromWishList{
+    background-color: #c72d1c;
+    border-color: #c72d1c;
+    color: white;
+}
+    
 
 
 
