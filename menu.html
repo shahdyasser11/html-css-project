@@ -65,65 +65,70 @@
 
 
 
-
-
-
-
   <div class="menu-layout container-fluid">
     <div class="row menu-container">
       <div class="menu-nav col-lg-3 col-sm-12">
         <div class="d-flex flex-column align-items-center">
-          <!-- Logo Section -->
-          <div class="text-center w-100 utensil logo-menu">
-            <i class="fa-solid fa-utensils mt-4 fa-bounce" mb-4></i>
+          <!-- Logo and Menu Section -->
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <!-- Logo Section -->
+            <div class="text-center utensil logo-menu">
+              <i class="fa-solid fa-utensils mt-4 fa-bounce"></i>
+            </div>
+        
+            <!-- Collapsible Button for Small Screens -->
+            <button class="btn btn-primary d-lg-none mb-3 menuBar" type="button" data-bs-toggle="collapse" data-bs-target="#v-pills-collapse"
+              aria-expanded="false" aria-controls="v-pills-collapse">
+              <i class="fa-solid fa-bars"></i>
+            </button>
           </div>
-
+        
           <!-- Navigation Section -->
-          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <!-- Home Item -->
-            <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
-              <i class="fa-solid fa-house me-2 ic-bg-home"></i>
-              <a href="index.html" class="nav-link" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home"
-                aria-selected="false">Home</a>
-
-            </div>
-
-            <!-- Meals Item -->
-            <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
-              <i class="fa-solid fa-bacon me-2 ic-bg ic-bg-meals"></i>
-              <a href="" class="nav-link" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home"
-                aria-selected="false">Meals</a>
-            </div>
-
-
-            <!-- cart Item -->
-            <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
-              <i class="fa-solid fa-cart-shopping icon-link-hover"
-              id="cart"></i>
-              
-              <a href="#" class="nav-link" id="v-pills-home-tab" data-bs-toggle="modal" data-bs-target="#cartModal"
-                aria-controls="v-pills-home" aria-selected="true" onclick="viewCart(productArray)">
-                Cart
-              </a>
-
-
-            </div>
-
-            <!-- wishlist Item -->
-            <div class="nav-logo-item d-flex align-items-center justify-content-center mb-3">
-              <i class="fa-solid fa-heart  position-relative"></i>
-              <a href="#" class="nav-link" id="v-pills-home-tab" data-bs-toggle="modal" data-bs-target="#wishlistModal"
-                aria-controls="v-pills-home" aria-selected="true" onclick="viewWishList(wishlistItems)">
-                Wishlist
-              </a>
-
-            </div>
-            <div class="photo-section text-center mt-4">
-              <!-- <img src="./imgs/delivery.png" alt="Delivery" class="img-fluid photo-img"> -->
-              <p class="mt-2">Fastest Delivery.</p>
+          <div class="nav flex-column nav-pills w-100" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <!-- Collapsing content on small screens and visible on large screens -->
+            <div class="collapse d-lg-block" id="v-pills-collapse">
+              <!-- Home Item -->
+              <div class="nav-logo-item d-flex align-items-center mb-3" style="justify-content: flex-start;">
+                <i class="fa-solid fa-house me-2 ic-bg-home"></i>
+                <a href="index.html" class="nav-link ps-0 text-start" id="v-pills-home-tab" role="tab" aria-controls="v-pills-home" aria-selected="false">
+                  Home
+                </a>
+              </div>
+        
+              <!-- Meals Item -->
+              <div class="nav-logo-item d-flex align-items-center mb-3" style="justify-content: flex-start;">
+                <i class="fa-solid fa-bacon me-2 ic-bg ic-bg-meals"></i>
+                <a href="#" class="nav-link left-nav ps-0 text-start" id="v-pills-meals-tab" role="tab" aria-controls="v-pills-meals" aria-selected="false">
+                  Meals
+                </a>
+              </div>
+        
+              <!-- Cart Item -->
+              <div class="nav-logo-item d-flex align-items-center mb-3" style="justify-content: flex-start;">
+                <i class="fa-solid fa-cart-shopping me-2 icon-link-hover" id="cart"></i>
+                <a href="#" class="nav-link ps-0 text-start" id="v-pills-cart-tab" data-bs-toggle="modal" data-bs-target="#cartModal"
+                  aria-controls="v-pills-cart" aria-selected="true" onclick="viewCart(productArray)">
+                  Cart
+                </a>
+              </div>
+        
+              <!-- Wishlist Item -->
+              <div class="nav-logo-item d-flex align-items-center mb-3" style="justify-content: flex-start;">
+                <i class="fa-solid fa-heart me-2"></i>
+                <a href="#" class="nav-link ps-0 text-start" id="v-pills-wishlist-tab" data-bs-toggle="modal" data-bs-target="#wishlistModal"
+                  aria-controls="v-pills-wishlist" aria-selected="true" onclick="viewWishList(wishlistItems)">
+                  Wishlist
+                </a>
+              </div>
+        
+              <!-- Photo Section -->
+              <div class="photo-section text-center mt-4">
+                <p class="mt-2">Fastest Delivery.</p>
+              </div>
             </div>
           </div>
         </div>
+        
 
 
       </div>
