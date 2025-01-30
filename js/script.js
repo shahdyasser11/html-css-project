@@ -39,7 +39,8 @@ async function getMeals(obj) {
         if (response.ok) {
             let mealArray = await response.json();
             mealList = mealArray.categories;
-            viewMeals(mealList);
+            viewMeals(mealList);  
+            highlightWishlistItems(); 
         } else {
             console.error("Error: ", response.status);
         }
@@ -47,6 +48,7 @@ async function getMeals(obj) {
         console.error("Network error:", error);
     }
 }
+
 
 getMeals(options);
 
@@ -96,7 +98,7 @@ function viewMeals(list) {
                              <button class="btn btn-primary btn-sm addToCartBtn" 
                                     id="addToCartBtn-${i}" 
                                     data-added="false"
-                                    onclick="AddToCart(${i});showToastMessage()";">
+                                    onclick="AddToCart(${i}); showToastMessage();">
                                 Add to Cart
                             </button>
                      
@@ -214,11 +216,16 @@ function AddToCart(i) {
 
 
 
-function delFromCart(i){
-    productArray.splice(i,1);
-    cartNo.innerText=productArray.length;
-    viewCart(productArray);
-};
+    function delFromCart(category) {
+        const index = productArray.findIndex(item => item.strCategory === category);
+        if (index !== -1) {
+            productArray.splice(index, 1);
+            cartNo.innerText = productArray.length;
+            viewCart(productArray);
+            localStorage.setItem('cart', JSON.stringify(productArray));
+        }
+    }
+    
 function removeFromWishlist(i){
     wishlist.splice(i,1);
     wishlistNo.innerText=wishlist.length;
@@ -306,34 +313,35 @@ function viewWishList(list) {
 
 function toggleWishlist(index) {
     const heartIcon = document.getElementById(`wishlistBtn-${index}`).querySelector('i');
-    const mealName = mealList[index].strCategory;
-    const itemIndex = wishlist.indexOf(mealName);
+    const meal = mealList[index]; 
+    const itemIndex = wishlist.findIndex(item => item.strCategory === meal.strCategory);
 
     if (itemIndex === -1) {
-        wishlistItems.push(mealList[index]);
-        wishlist.push(mealList[index].strCategory);
-        heartIcon.classList.add('active'); // Highlight the heart icon
+        wishlist.push(meal);
+        heartIcon.classList.add('active');
     } else {
         wishlist.splice(itemIndex, 1);
-        wishlistItems.splice(itemIndex,1);
-        heartIcon.classList.remove('active'); // Remove highlight from heart icon
+        heartIcon.classList.remove('active');
     }
 
     wishlistNo.innerText = wishlist.length;
-
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
 }
 
-function highlightWishlistItems() {
-    wishlist.forEach((mealName) => {
-        const index = mealList.findIndex((meal) => meal.strCategory === mealName);
 
-        if (index !== -1) {
-            const heartIcon = document.getElementById(`wishlistBtn-${index}`).querySelector('i');
-            heartIcon.classList.add('active');
+function highlightWishlistItems() {
+    wishlist.forEach((meal) => { 
+        const index = mealList.findIndex((m) => m.strCategory === meal.strCategory); 
+
+        if (index !== -1) { 
+            const heartIcon = document.getElementById(`wishlistBtn-${index}`)?.querySelector('i');
+            if (heartIcon) {
+                heartIcon.classList.add('active');
+            }
         }
     });
 }
+
 
 function initializeCounters() {
     wishlistNo.innerText = wishlist.length;

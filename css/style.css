@@ -38,6 +38,9 @@
     color: #705C53;
 
 }
+.collapse-icon{
+    transform: translateY(50%);
+}
 
 .homeImg {
     width: 98%;
