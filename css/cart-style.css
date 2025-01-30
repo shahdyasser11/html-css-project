@@ -1,0 +1,113 @@
+/* cart */
+#cart:hover{
+    color: rgb(27, 27, 27);
+}
+
+/* Colors Of Sections */
+#featuresSec{
+    background-color:#eddfdf;
+}
+#orderSec{
+    background-color:#f5f5f7;
+}
+.contactSec{
+    background-color: #b7b7b7;
+}
+footer{
+    background-color:#705c53; 
+}
+
+/* CSS Of Buttons At YourOrder List  */
+.increase , .decrease{
+    border: none;
+    background-color: rgb(212, 211, 211);
+}
+.pay{
+    margin-left: 100px;
+    border: none;
+}
+
+/* CSS Of Scroll At YourOrder List  */
+#roots{
+    height: 700px;
+   overflow-y: auto;
+   overscroll-behavior: contain;
+}
+
+/* CSS Animation Of IMages At Features Section  */
+#jpg:hover{
+    opacity: 0.8;
+    transform:scale(1.2);
+}
+
+/* CSS Of SocialMedia Links */
+.text2 {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    background: #ffff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-out;
+}
+.text2:hover {
+    width: 200px;
+}
+.text3 {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 40px;
+}
+.text2:nth-child(1):hover .text3{
+    background: #4065b1;
+    color: #4065b1;
+
+}
+ .text2:nth-child(2):hover .text3{
+    background: #d60c0c;
+}
+.text2:nth-child(3):hover .text3{
+    background: #d6249f;
+}            
+.text2:nth-child(4):hover .text3{
+    background: #058f2e;
+}
+.text2:nth-child(5):hover .text3{
+    background: #1c9cea;
+}
+.text2:nth-child(6):hover .text3{
+    background:#666666;
+}
+.text3 a {
+    color: #000;
+    font-size: 25px;
+}
+.text2 span {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.text2:nth-child(1) span{
+   color: #4065b1;
+}
+.text2:nth-child(2) span{
+    color: #d60c0c;
+}
+.text2:nth-child(3) span{
+    color: #d6249f;
+}            
+.text2:nth-child(4) span{
+    color: #058f2e;
+}
+.text2:nth-child(5) span{
+    color: #1c9cea;
+}
+.text2:nth-child(6) span{
+    color: #666666;
+}
+
