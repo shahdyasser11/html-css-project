@@ -4,7 +4,7 @@ let wishlistNo = document.getElementById("wishlistNo");
 let productArray = JSON.parse(localStorage.getItem('cart')) || [];  
 let mealList = [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-let wishlistItems=JSON.parse(localStorage.getItem('wishlist')) || [];
+let wishlistItems=JSON.parse(localStorage.getItem('wishlistItems')) || [];
 let cartModel=document.getElementById('cartModel');
 let payElements = document.getElementById("payElements");
 let wishListModal=document.getElementById("wishListModal");
@@ -217,46 +217,57 @@ function AddToCart(i) {
 
 
     function delFromCart(category) {
-        const index = productArray.findIndex(item => item.strCategory === category);
-        if (index !== -1) {
-            productArray.splice(index, 1);
-            cartNo.innerText = productArray.length;
-            viewCart(productArray);
-            localStorage.setItem('cart', JSON.stringify(productArray));
+        let index;
+        let found = true;
+            while (found) {
+            index = productArray.findIndex(item => item.strCategory === category);
+    
+            if (index !== -1) {
+                productArray.splice(index, 1);
+            } else {
+                found = false;
+            }
         }
+            cartNo.innerText = productArray.length;
+        viewCart(productArray);
+        localStorage.setItem('cart', JSON.stringify(productArray));
     }
+    
     
 function removeFromWishlist(i){
     wishlist.splice(i,1);
     wishlistNo.innerText=wishlist.length;
     viewWishList(wishlist);
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
 }
 
-function viewWishList(list) {
+function viewWishList() {
     let htmlData = '';
     let price = 10; 
     let presentItems = [];
     let itemQuantity = [];
-
-    for (let i = 0; i < list.length; i++) {
-        let item = list[i]; 
-        console.log(item.strCategory); 
+    for (let i = 0; i < wishlist.length; i++) {
+        let item = wishlist[i]; 
         let itemCount = 0;
 
         if (presentItems.includes(item.strCategory)) {
             continue;
         }
+         presentItems.push(item);
 
-        for (let j = 0; j < list.length; j++) {
-            if (list[j].strCategory === item.strCategory) {
+        for (let j = 0; j < wishlist.length; j++) {
+            if (wishlist[j].strCategory === item.strCategory) {
                 itemCount++;
             }
         }
         itemQuantity.push(itemCount);
-        presentItems.push(item);
-
         const fullDescription = item.strCategoryDescription || "No description available";
         const shortDescription = fullDescription.slice(0, 100);
+        
+        // console.log("wishlist",wishlist);
+        let mealIndex = mealList.findIndex(meal => meal.strCategory === item.strCategory);
+
 
 
         htmlData += `
@@ -288,7 +299,7 @@ function viewWishList(list) {
                             <button class="btn btn-primary btn-sm addToCartBtn" 
                                     id="addToCartBtn-${i}" 
                                     data-added="false"
-                                    onclick="AddToCart(${i});showToastMessage();">
+                                    onclick="AddToCart(${mealIndex});showToastMessage();">
                                 Add to Cart
                             </button>
                              <button class="btn btn-primary btn-sm removeFromWishList" 

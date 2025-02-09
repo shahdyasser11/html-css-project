@@ -194,9 +194,11 @@ margin-bottom: 2rem;
     color: white;
     font-size: 1.5rem;
 }
-/* .apps img{
-    height: 50%;
-} */
+ .apps img{
+ height: 5rem; 
+ object-fit: contain;
+} 
+
 .apps img:hover{
     cursor: pointer;
     transform: scale(1.03);

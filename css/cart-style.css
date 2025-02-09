@@ -23,8 +23,12 @@ footer{
     background-color: rgb(212, 211, 211);
 }
 .pay{
-    margin-left: 100px;
     border: none;
+    display: block;
+    margin: 0 auto;
+    width: 30%; 
+    max-width: 250px; 
+    text-align: center;
 }
 
 /* CSS Of Scroll At YourOrder List  */
